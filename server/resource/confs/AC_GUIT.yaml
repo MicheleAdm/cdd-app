@@ -1,0 +1,45 @@
+steps:
+  - name: SELECT_NUMBER_OF_STRINGS
+    values:
+      - description: 6
+        value: 0
+        preselected: true
+      - description: 12
+        value: 1
+        additionalCost: 35
+    selectionRule: EXACTLY_ONE
+    required: true
+
+  - name: SELECT_WOOD
+    values:
+      - description: Spruce
+        value: 0
+      - description: Cedar
+        value: 1
+        preselected: true
+    selectionRule: EXACTLY_ONE
+    required: true
+
+  - name: SELECT_PICKUP
+    values:
+      - description: Piezo 1
+        value: 0
+        additionalCost: 40
+      - description: Piezo 2
+        value: 1
+        additionalCost: 40
+    selectionRule: EXACTLY_ONE
+    required: false
+
+  - name: SELECT_PICKGUARD
+    values:
+      - description: no
+        value: 0
+        preselected: true
+      - description: yes
+        value: 1
+        additionalCost: 20
+    selectionRule: BOOLEAN
+    required: false
+
+basePrice: 300

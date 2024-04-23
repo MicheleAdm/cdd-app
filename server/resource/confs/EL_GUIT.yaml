@@ -1,0 +1,87 @@
+steps:
+  - name: SELECT_NUMBER_OF_STRINGS
+    values:
+      - description: 6
+        value: 0
+        preselected: true
+      - description: 7
+        value: 1
+        additionalCost: 20
+      - description: 8
+        value: 2
+        additionalCost: 40
+      - description: 9
+        value: 3
+        additionalCost: 60
+    selectionRule: EXACTLY_ONE
+    required: true
+
+  - name: SELECT_PICKUP
+    steps:
+      - name: SELECT_NECK_PICKUP
+        values:
+          - description: Standard
+            value: 0
+            preselected: true
+          - description: Seymour Duncan
+            value: 1
+            additionalCost: 45
+          - description: EMG
+            value: 2
+            additionalCost: 90
+        selectionRule: EXACTLY_ONE
+      - name: SELECT_BRIDGE_PICKUP
+        values:
+          - description: Standard
+            value: 0
+            preselected: true
+          - description: Seymour Duncan
+            value: 1
+            additionalCost: 45
+          - description: EMG
+            value: 2
+            additionalCost: 90
+        selectionRule: EXACTLY_ONE
+    selectionRule: AT_LEAST_ONE_COMPLEX
+    required: true
+
+  - name: SELECT_EQUALIZER
+    values:
+      - description: LOW
+        value: 0
+        additionalCost: 20
+      - description: MID
+        value: 1
+        additionalCost: 20
+      - description: HI
+        value: 2
+        additionalCost: 20
+    selectionRule: ZERO_OR_MORE
+    required: false
+
+  - name: SELECT_NUMBER_OF_FRETS
+    values:
+      - description: 24
+        value: 0
+        preselected: true
+      - description: 25
+        value: 1
+        additionalCost: 40
+      - description: 26
+        value: 2
+        additionalCost: 80
+    selectionRule: EXACTLY_ONE
+    required: true
+
+  - name: SELECT_IS_FRETLESS
+    values:
+      - description: no
+        value: 0
+        preselected: true
+      - description: yes
+        value: 1
+        additionalCost: 20
+    selectionRule: BOOLEAN
+    required: false
+
+basePrice: 300

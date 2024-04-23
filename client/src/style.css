@@ -1,0 +1,53 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgb(242, 183, 111);
+}
+
+.header h1 {
+  margin: 0px;
+  padding: 20px;
+  color: rgb(255, 250, 243);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.header h1 a {
+  text-decoration: none;
+  color: beige;
+}
+
+#container {
+  max-width: 80%;
+  margin: 40px auto;
+}
+
+#container h2 {
+  text-transform: uppercase;
+}
+
+.item-container {
+  max-width: 80%;
+  margin: 40px auto;
+}
+
+.item-container h3 {
+  text-align: center;
+  font-size: 36px;
+}
+
+.item-container ul {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.item-container ul:not(ul > ul) {
+  border-bottom: 0.1rem solid rgb(242, 183, 111);
+}
+
+.item-container select {
+  margin-left: 20px;
+}
